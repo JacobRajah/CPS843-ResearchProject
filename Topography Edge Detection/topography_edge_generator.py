@@ -8,6 +8,7 @@ img = cv2.imread('palm_island_ikonos.jpg', 0)
 def convert_to_roberts(img):
     """
     Sample code is provided by programmerall.com
+    URL: https://programmerall.com/article/8736477946/
     """
     kernelx = np.array([[-1, 0], [0, 1]], dtype=int)
     kernely = np.array([[0, -1], [1, 0]], dtype=int)
@@ -31,6 +32,7 @@ def convert_to_roberts(img):
 def convert_to_sobel(img):
     """
     Sample code is provided by docs.opencv.org
+    URL: https://stackoverflow.com/questions/42802352/sobel-edge-detection-in-python-and-opencv
     """
     sobel_horizontal = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=5)
     sobel_vertical = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=5)
@@ -56,6 +58,7 @@ def convert_to_sobel(img):
 def convert_to_prewitt(img):
     """
     Sample code is provided by gist.github.com/rahit/
+    URL: https://gist.github.com/rahit/c078cabc0a48f2570028bff397a9e154
     """
     kernelx = np.array([[1, 1, 1], [0, 0, 0], [-1, -1, -1]])
     kernely = np.array([[-1, 0, 1], [-1, 0, 1], [-1, 0, 1]])
@@ -79,6 +82,7 @@ def convert_to_prewitt(img):
 def convert_to_canny(img):
     """
     Sample code is provided by docs.opencv.org
+    URL: https://docs.opencv.org/3.4/da/d22/tutorial_py_canny.html
     """
     edges = cv2.Canny(img, 100, 200)
 
